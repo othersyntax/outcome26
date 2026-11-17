@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papan Kehadiran - BKPO KKM 2026</title>
+  <link rel="stylesheet" href="css/papan.css">
+</head>
+<body>
+  <div class="bg"><i></i><i></i><i></i></div>
+  <header class="top">
+    <img src="assets/jata.png" alt="Jata Negara">
+    <div class="ttl"><small>BENGKEL KAJIAN PENILAIAN OUTCOME KKM 2026</small><h1>Papan Kehadiran</h1></div>
+    <span id="mode" class="badge"></span>
+    <button id="wallBtn" class="btn">Paparan QR skrin dewan</button>
+    <button id="csvBtn" class="btn ghost">Eksport CSV</button>
+  </header>
+
+  <div class="layout">
+    <aside class="qrpanel" id="qrpanel">
+      <button id="wallClose" class="btn ghost close">Tutup</button>
+      <div class="qrhead">IMBAS UNTUK SAH KEHADIRAN <b id="qDay"></b></div>
+      <div class="qrbox"><div id="qr"></div><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" id="ringc"/></svg></div>
+      <div class="qrnote" id="qNote"></div>
+      <div class="wallstat"><b id="wCount">0</b> / <span id="wTotal">0</span> hadir</div>
+      <div class="ticker" id="ticker"></div>
+    </aside>
+
+    <main>
+      <nav class="tabs" id="tabs">
+        <button data-t="18">Rabu 18</button><button data-t="19">Khamis 19</button><button data-t="20">Jumaat 20</button><button data-t="all">Ringkasan</button>
+      </nav>
+      <section class="stats">
+        <div class="donut" id="donut"><span id="pct">0%</span></div>
+        <div class="st ok"><b id="sOk">0</b><small>Sudah sah</small></div>
+        <div class="st no"><b id="sNo">0</b><small>Belum sah</small></div>
+        <div class="st"><b id="sAll">0</b><small>Jumlah</small></div>
+        <div class="tools">
+          <input id="q" type="search" placeholder="Cari nama / jawatan...">
+          <select id="flt"><option value="all">Semua</option><option value="no">Belum sah sahaja</option><option value="ok">Sudah sah sahaja</option></select>
+        </div>
+      </section>
+      <section id="orgs"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="js/vendor/qrcode.min.js"></script>
+  <script src="data/peserta.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/papan.js"></script>
+</body>
+</html>

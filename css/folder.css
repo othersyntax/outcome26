@@ -1,0 +1,38 @@
+/* ---------- Halaman Folder Bengkel: susun atur dua lajur ---------- */
+.with-qr .center { right: auto; width: 1230px; padding-bottom: 80px; }
+.with-qr .rings { left: 615px; top: 470px; width: 940px; height: 940px; margin: -470px 0 0 -470px; }
+.with-qr .crest-top { left: 615px; top: 34px; width: 112px; height: 84px; margin-left: -56px; }
+.with-qr .crest-top img { width: 104px; }
+.with-qr .t1 { font-size: 62px; letter-spacing: 4px; }
+.with-qr .t2 { font-size: 160px; letter-spacing: 8px; }
+.with-qr .sub { margin-top: 26px; padding: 10px 40px; }
+.with-qr .sub span { font-size: 27px; letter-spacing: 5px; }
+.with-qr .chips { gap: 22px; margin-top: 26px; }
+.with-qr .chip { padding: 12px 30px 12px 12px; gap: 14px; }
+.with-qr .chip b { font-size: 26px; letter-spacing: 1px; }
+.with-qr .chip small { font-size: 15px; letter-spacing: 4px; }
+.with-qr .ico { width: 50px; height: 50px; }
+.with-qr .ico svg { width: 26px; height: 26px; }
+
+/* Panel QR */
+.qr-panel { position: absolute; right: 90px; top: 50%; width: 580px; transform: translateY(-50%); z-index: 8; display: flex; flex-direction: column; align-items: center; gap: 26px; animation: qrIn 1.2s .8s cubic-bezier(.2,1.1,.3,1) both; }
+@keyframes qrIn { from { opacity: 0; transform: translateY(-50%) translateX(120px) scale(.8); filter: blur(12px); } to { opacity: 1; transform: translateY(-50%); filter: none; } }
+.qr-tag { display: flex; align-items: center; gap: 16px; padding: 12px 34px 12px 22px; border-radius: 60px; background: linear-gradient(90deg, var(--cyan), var(--violet) 60%, var(--magenta)); color: #05010f; font-size: 34px; font-weight: 900; letter-spacing: 4px; box-shadow: 0 0 40px rgba(34,230,255,.6); }
+.qr-tag svg { width: 40px; height: 40px; fill: rgba(5,1,15,.15); stroke: #05010f; stroke-width: 2; stroke-linejoin: round; }
+.qr-card { position: relative; width: 536px; height: 536px; padding: 18px; background: #fff; border-radius: 30px; box-shadow: 0 0 80px rgba(34,230,255,.55), 0 0 0 6px rgba(255,255,255,.08); animation: qrFloat 6s ease-in-out infinite; }
+.qr-card img { width: 100%; height: 100%; display: block; border-radius: 12px; }
+.qr-card::before { content: ""; position: absolute; inset: -7px; border-radius: 36px; padding: 5px; z-index: -1;
+  background: conic-gradient(from var(--ang, 0deg), var(--cyan), var(--violet), var(--magenta), var(--cyan));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: spin 4s linear infinite; }
+@keyframes qrFloat { 50% { transform: translateY(-10px); } }
+/* garis imbas melintasi QR */
+.qr-scan { position: absolute; left: 10px; right: 10px; height: 6px; top: 18px; border-radius: 6px; background: linear-gradient(90deg, transparent, var(--cyan), var(--magenta), transparent); box-shadow: 0 0 24px 6px rgba(34,230,255,.8); animation: qrScan 3.2s ease-in-out infinite; }
+@keyframes qrScan { 0%, 100% { top: 18px; } 50% { top: calc(100% - 24px); } }
+/* sudut bingkai imbas */
+.qc { position: absolute; width: 46px; height: 46px; border: 0 solid var(--magenta); filter: drop-shadow(0 0 8px var(--magenta)); animation: cornerPulse 2s ease-in-out infinite; }
+.qc.tl { top: -14px; left: -14px; border-top-width: 6px; border-left-width: 6px; border-top-left-radius: 14px; }
+.qc.tr { top: -14px; right: -14px; border-top-width: 6px; border-right-width: 6px; border-top-right-radius: 14px; }
+.qc.bl { bottom: -14px; left: -14px; border-bottom-width: 6px; border-left-width: 6px; border-bottom-left-radius: 14px; }
+.qc.br { bottom: -14px; right: -14px; border-bottom-width: 6px; border-right-width: 6px; border-bottom-right-radius: 14px; }
+.qr-cap { white-space: nowrap; text-align: center; font-size: 26px; font-weight: 800; letter-spacing: 4px; color: var(--cyan-l); text-shadow: 0 0 20px var(--cyan); animation: capPulse 2.4s ease-in-out infinite; }
+@keyframes capPulse { 50% { opacity: .55; } }

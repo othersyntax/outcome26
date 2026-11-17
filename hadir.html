@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sahkan Kehadiran - BKPO KKM 2026</title>
+  <link rel="stylesheet" href="css/hadir.css">
+</head>
+<body>
+  <div class="bg"><i></i><i></i></div>
+  <header>
+    <img src="assets/jata.png" alt="Jata Negara">
+    <div><small>BENGKEL KAJIAN PENILAIAN OUTCOME KKM 2026</small><h1>Sahkan Kehadiran</h1></div>
+  </header>
+  <main>
+    <div id="msg" class="msg" hidden></div>
+    <section id="pick" hidden>
+      <p class="hint">Cari dan ketik nama anda.</p>
+      <input id="q" type="search" placeholder="Cari nama..." autocomplete="off">
+      <div id="list"></div>
+    </section>
+    <section id="done" class="done" hidden>
+      <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M14 27l8 8 16-17"/></svg>
+      <h2>Kehadiran disahkan</h2>
+      <b id="dName"></b>
+      <span id="dInfo"></span>
+    </section>
+  </main>
+  <div id="sheet" class="sheet" hidden>
+    <div class="card">
+      <p>Anda ialah</p>
+      <b id="cName"></b><small id="cOrg"></small>
+      <button id="yes" class="btn">Ya, sahkan kehadiran</button>
+      <button id="no" class="btn ghost">Bukan saya</button>
+    </div>
+  </div>
+  <script src="data/peserta.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/hadir.js"></script>
+</body>
+</html>

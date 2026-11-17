@@ -1,0 +1,64 @@
+/* ---------- Halaman utama: tajuk, tarikh, lokasi ---------- */
+.rings { position: absolute; left: 50%; top: 420px; width: 1100px; height: 1100px; margin: -550px 0 0 -550px; opacity: .55; z-index: 1; filter: drop-shadow(0 0 12px rgba(34,230,255,.6)); animation: ringIn 2s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes ringIn { from { opacity: 0; transform: scale(.6) rotate(-40deg); } to { opacity: .55; transform: none; } }
+.rings .r { transform-origin: 0 0; }
+.r1 { animation: rot 70s linear infinite; }
+.r2 { animation: rot 46s linear infinite reverse; }
+.r3 { animation: rot 30s linear infinite; }
+.r4 { animation: rot 18s linear infinite; }
+@keyframes rot { to { transform: rotate(360deg); } }
+
+.center { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 70px; animation: floaty 9s ease-in-out infinite; }
+@keyframes floaty { 50% { transform: translateY(-10px); } }
+
+.title { display: flex; flex-direction: column; align-items: center; font-weight: 900; line-height: 1; perspective: 1200px; }
+.t1 { font-size: 100px; letter-spacing: 6px; }
+.t2 { font-size: 250px; letter-spacing: 12px; font-style: italic; margin-top: -4px; }
+
+/* Setiap huruf dipecah oleh main.js */
+.ch { display: inline-block; text-align: center; opacity: 0; transform-origin: 50% 100%;
+  animation: charIn .9s cubic-bezier(.2,.9,.2,1) forwards, wave 5.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 55ms), calc(1.6s + var(--i) * 110ms); }
+.ch.sp { width: .32em; }
+.t1 .ch { color: #fff; text-shadow: 0 0 22px rgba(34,230,255,.55), 0 4px 30px rgba(0,0,0,.6); }
+.t2 .ch { color: hsl(var(--h) 100% 66%); text-shadow: 0 0 30px hsl(var(--h) 100% 60% / .8), 0 0 90px hsl(var(--h) 100% 55% / .55); }
+@keyframes charIn { 0% { opacity: 0; transform: translateY(70px) rotateX(-95deg) scale(.7); filter: blur(18px); }
+                    100% { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes wave { 0%, 14%, 100% { filter: brightness(1); } 7% { filter: brightness(1.9) drop-shadow(0 0 18px #fff); transform: translateY(-6px); } }
+.ch.scr { color: var(--cyan-l) !important; }
+
+/* Bar tahun: kaca + cahaya meluncur */
+.sub { position: relative; margin-top: 34px; padding: 14px 70px; border-radius: 14px; overflow: hidden;
+  background: linear-gradient(90deg, rgba(34,230,255,.12), rgba(162,89,255,.22), rgba(255,62,165,.12));
+  border: 1.5px solid rgba(182,246,255,.45); backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(34,230,255,.25), inset 0 0 30px rgba(162,89,255,.2);
+  animation: subIn 1.2s .9s cubic-bezier(.2,.9,.2,1) both; }
+.sub span { position: relative; z-index: 1; font-size: 44px; font-weight: 800; letter-spacing: 8px; background: linear-gradient(90deg, #fff, var(--cyan-l), #fff); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: textFlow 6s linear infinite; }
+.sub::after { content: ""; position: absolute; top: 0; bottom: 0; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.4), transparent); animation: sweep 5s 2s ease-in-out infinite; }
+@keyframes subIn { from { opacity: 0; clip-path: inset(0 50% 0 50%); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+@keyframes textFlow { to { background-position: -200% 0; } }
+@keyframes sweep { 0% { left: -300px; } 50%, 100% { left: 110%; } }
+
+/* Chip tarikh dan lokasi: sempadan neon berputar */
+.chips { display: flex; gap: 40px; margin-top: 34px; }
+.chip { position: relative; display: flex; align-items: center; gap: 20px; padding: 16px 44px 16px 18px; border-radius: 80px; background: rgba(8,4,32,.72); backdrop-filter: blur(12px); animation: chipIn 1s cubic-bezier(.2,1.2,.3,1) both; }
+.chip.c1 { animation-delay: 1.5s; } .chip.c2 { animation-delay: 1.75s; }
+.chip::before { content: ""; position: absolute; inset: -3px; border-radius: 83px; padding: 3px; z-index: -1;
+  background: conic-gradient(from var(--ang, 0deg), var(--cyan), var(--violet), var(--magenta), var(--cyan));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: spin 5s linear infinite; filter: drop-shadow(0 0 10px rgba(34,230,255,.7)); }
+.chip::after { content: ""; position: absolute; inset: 0; border-radius: 80px; z-index: -2; box-shadow: 0 0 50px rgba(34,230,255,.28); }
+@property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes spin { to { --ang: 360deg; } }
+@keyframes chipIn { from { opacity: 0; transform: translateY(40px) scale(.7); } to { opacity: 1; transform: none; } }
+.chip b { display: block; font-size: 36px; font-weight: 800; letter-spacing: 2px; }
+.chip small { display: block; font-size: 20px; font-weight: 700; letter-spacing: 6px; color: var(--cyan); margin-top: 2px; }
+.ico { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--cyan), var(--violet)); box-shadow: 0 0 24px rgba(34,230,255,.7); flex: none; animation: icoPulse 2.6s ease-in-out infinite; }
+.ico svg { width: 34px; height: 34px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes icoPulse { 50% { box-shadow: 0 0 44px rgba(255,62,165,.9); } }
+
+/* Jata di bahagian atas tengah */
+.crest-top { position: absolute; top: 40px; left: 50%; width: 136px; height: 102px; margin-left: -68px; z-index: 4; background: #fff; border-radius: 18px; display: grid; place-items: center; box-shadow: 0 0 0 3px var(--cyan), 0 0 40px rgba(34,230,255,.7); animation: crestIn 1.2s .3s cubic-bezier(.2,1.2,.3,1) both, crestGlow 4s 2s ease-in-out infinite; overflow: hidden; }
+.crest-top img { width: 126px; height: auto; }
+@keyframes crestIn { from { opacity: 0; transform: translateY(-40px) scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes crestGlow { 50% { box-shadow: 0 0 0 3px var(--magenta), 0 0 60px rgba(255,62,165,.8); } }
