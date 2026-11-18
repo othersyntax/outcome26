@@ -18,7 +18,7 @@
   }
   addEventListener("resize", fit); fit();
 
-  const page = location.pathname.endsWith("sesi.html") ? "sesi" : location.pathname.endsWith("folder.html") ? "folder" : "index";
+  const page = location.pathname.endsWith("sesi.html") ? "sesi" : location.pathname.endsWith("folder.html") ? "folder" : location.pathname.endsWith("laman.html") ? "laman" : "index";
 
   // Butang navigasi: kekalkan parameter URL (cth. ?t=...) dan tunjuk kursor bila tetikus bergerak
   const nb = document.getElementById("navBtn");
@@ -34,6 +34,7 @@
     if (k === "f") document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
     else if ((k === "s" || k === " " || k === "pagedown") && page === "index") location.href = "sesi.html" + location.search;
     else if (k === "b" && page === "index") location.href = "folder.html" + location.search;
+    else if (k === "l" && page === "index") location.href = "laman.html" + location.search;
     else if ((k === "m" || k === "pageup") && page !== "index") location.href = "index.html" + location.search;
   });
 

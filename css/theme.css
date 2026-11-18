@@ -69,6 +69,7 @@ html, body { width: 100%; height: 100%; background: #000; overflow: hidden; font
 .nav-next { right: 60px; bottom: 60px; animation: nudge 2.4s ease-in-out infinite; }
 .nav-back { top: 52px; right: 430px; }
 .nav-folder { right: 144px; bottom: 60px; }
+.nav-laman { right: 228px; bottom: 60px; }
 .nav-home { right: 60px; bottom: 60px; }
 @keyframes nudge { 50% { transform: translateX(6px); } }
 body.mouse-on, body.mouse-on * { cursor: default !important; }
