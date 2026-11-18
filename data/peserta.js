@@ -56,31 +56,31 @@ window.PESERTA = [
  {
   "id": "P10",
   "nama": "DR FARRAH IFFADZILLAH MD ZENI",
-  "jawatan": "PEGAWAI PERGIGIAN UG14",
+  "jawatan": "Pegawai Pergigian",
   "org": "PROGRAM KESIHATAN PERGIGIAN / KLINIK PERGIGIAN BERGERAK PAHANG"
  },
  {
   "id": "P11",
   "nama": "Dr. Azah binti Zainal Abidin",
-  "jawatan": "Pegawai Pergigian UG 12",
+  "jawatan": "Pegawai Pergigian",
   "org": "PROGRAM KESIHATAN PERGIGIAN / KLINIK PERGIGIAN BERGERAK PAHANG"
  },
  {
   "id": "P12",
   "nama": "Dr Noor Asilati binti Abdul Raob",
-  "jawatan": "Pegawai Pergigian Daerah UG14",
+  "jawatan": "Pegawai Pergigian Daerah",
   "org": "PROGRAM KESIHATAN PERGIGIAN / KLINIK PERGIGIAN BERGERAK PAHANG"
  },
  {
   "id": "P13",
   "nama": "DR Siti Norasiah Bt Basrawi",
-  "jawatan": "KPPK Dasar dan Perancangan Strategik UG14",
+  "jawatan": "KPPK Dasar dan Perancangan Strategik",
   "org": "PROGRAM KESIHATAN PERGIGIAN / KLINIK PERGIGIAN BERGERAK PAHANG"
  },
  {
   "id": "P14",
   "nama": "DR NURLIYANA ROSLAN",
-  "jawatan": "PAKAR PERGIGIAN (KESIHATAN AWAM) UG 13",
+  "jawatan": "Pakar Pergigian (Kesihatan Awam)",
   "org": "PROGRAM KESIHATAN PERGIGIAN / KLINIK PERGIGIAN BERGERAK PAHANG"
  },
  {
@@ -92,31 +92,31 @@ window.PESERTA = [
  {
   "id": "P16",
   "nama": "Dr Muhammad Faiz bin Mohd Ishak",
-  "jawatan": "Pakar Perubatan Kesihatan Awam UD 14",
+  "jawatan": "Pakar Perubatan Kesihatan Awam",
   "org": "BAHAGIAN PERKEMBANGAN KESIHATAN AWAM"
  },
  {
   "id": "P17",
   "nama": "Mohd Fikri bin Rahim",
-  "jawatan": "Jurutera J12",
+  "jawatan": "Jurutera",
   "org": "BAHAGIAN PERKHIDMATAN KEJURUTERAAN"
  },
  {
   "id": "P18",
   "nama": "Dr Punitha Arinima",
-  "jawatan": "Pakar Perubatan Keluarga, UD15",
+  "jawatan": "Pakar Perubatan Keluarga",
   "org": "JABATAN KESIHATAN NEGERI SELANGOR / PEMBINAAN KLINIK KESIHATAN (JENIS 2) SEMENYIH"
  },
  {
   "id": "P19",
   "nama": "Dr. Chandramalar a/p Kanthavelu",
-  "jawatan": "Pakar Perubatan Kesihatan Awam UD14",
+  "jawatan": "Pakar Perubatan Kesihatan Awam",
   "org": "JABATAN KESIHATAN NEGERI SELANGOR / PEMBINAAN KLINIK KESIHATAN (JENIS 2) SEMENYIH"
  },
  {
   "id": "P20",
   "nama": "DR HADZLINDA BINTI ZAINAL",
-  "jawatan": "PEGAWAI PERUBATAN UD14",
+  "jawatan": "Pegawai Perubatan",
   "org": "JABATAN KESIHATAN NEGERI SELANGOR / PEMBINAAN KLINIK KESIHATAN (JENIS 2) SEMENYIH"
  },
  {
@@ -128,31 +128,31 @@ window.PESERTA = [
  {
   "id": "P22",
   "nama": "DR IKHSAN BIN MASROR",
-  "jawatan": "PEGAWAI PERGIGIAN / UG14",
+  "jawatan": "Pegawai Pergigian",
   "org": "JABATAN KESIHATAN NEGERI SELANGOR / PEMBINAAN KLINIK KESIHATAN (JENIS 2) SEMENYIH"
  },
  {
   "id": "P23",
   "nama": "TING HUAT HIENG",
-  "jawatan": "PEGAWAI SAINS KIMIA HAYAT C10",
+  "jawatan": "Pegawai Sains Kimia Hayat",
   "org": "JABATAN KESIHATAN NEGERI SARAWAK / MENAIKTARAF HOSPITAL UMUM SARAWAK"
  },
  {
   "id": "P24",
   "nama": "Dr Alex Kim Ren Jye",
-  "jawatan": "Timbalan Pengarah Perubatan 1, UD14",
+  "jawatan": "Timbalan Pengarah Perubatan 1",
   "org": "JABATAN KESIHATAN NEGERI SARAWAK / MENAIKTARAF HOSPITAL UMUM SARAWAK"
  },
  {
   "id": "P25",
   "nama": "MUHAMMAD FAHMI BIN ISHAK",
-  "jawatan": "Penolong Pengarah M9",
+  "jawatan": "Penolong Pengarah",
   "org": "JABATAN KESIHATAN NEGERI SARAWAK / MENAIKTARAF HOSPITAL UMUM SARAWAK"
  },
  {
   "id": "P26",
   "nama": "JENNY NGILO",
-  "jawatan": "Penyelia Jururawat U10",
+  "jawatan": "Penyelia Jururawat",
   "org": "JABATAN KESIHATAN NEGERI SARAWAK / MENAIKTARAF HOSPITAL UMUM SARAWAK"
  },
  {
@@ -194,7 +194,7 @@ window.PESERTA = [
  {
   "id": "P33",
   "nama": "Puan Norzihan binti Mohamed Hassan",
-  "jawatan": "Pengawai Sains, C12",
+  "jawatan": "Pengawai Sains",
   "org": "PENCERAMAH"
  }
 ];
