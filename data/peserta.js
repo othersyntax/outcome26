@@ -49,7 +49,7 @@ window.PESERTA = [
  },
  {
   "id": "P09",
-  "nama": "YBrs. Dr. Siti Nur Fatihah binti Abdul Halim",
+  "nama": "Dr. Nurul Izzati binti Mohd Ali",
   "jawatan": "Ketua Penolong Pengarah Kanan",
   "org": "PROGRAM KESIHATAN PERGIGIAN / KLINIK PERGIGIAN BERGERAK PAHANG"
  },
